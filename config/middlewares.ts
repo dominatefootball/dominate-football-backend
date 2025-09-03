@@ -13,15 +13,15 @@ export default [
             'blob:',
             'dominate-football-backend.onrender.com',
             '*.onrender.com',
-            'res.cloudinary.com' // ✅ Add this for Cloudinary images
+            'res.cloudinary.com'
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'dominate-football-backend.onrender.com',
-            '*.onrender.com', 
-            'res.cloudinary.com' // ✅ Add this for Cloudinary media
+            '*.onrender.com',
+            'res.cloudinary.com'
           ],
           upgradeInsecureRequests: null,
         },
@@ -31,9 +31,13 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000'], // ✅ Allow Next.js frontend
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      headers: ['Content-Type', 'Authorization'],
+      origin: [
+        'http://localhost:3000',
+        'https://dominate-football-frontend.vercel.app', // ✅ Add your Vercel domain
+        'https://*.vercel.app' // ✅ Allow any Vercel preview deployments
+      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       credentials: true,
     },
   },
