@@ -1,6 +1,31 @@
 export default [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dominate-football-backend.onrender.com',
+            '*.onrender.com'
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dominate-football-backend.onrender.com',
+            '*.onrender.com'
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
