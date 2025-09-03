@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "date"
+    },
+    "slug": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "category": {
+      "type": "string",
+      "required": false
+    },
+    "pollVotes": {
+      "type": "json"
+    },
+    "imgCredit": {
+      "type": "string"
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "components.text-block",
+        "components.image-block"
+      ]
+    },
+    "slidertitleColour": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "red",
+        "yellow",
+        "black",
+        "blue",
+        "green",
+        "purple",
+        "orange",
+        "white"
+      ]
+    },
+    "Club": {
+      "type": "enumeration",
+      "enum": [
+        "All Clubs",
+        "Arsenal",
+        "Chelsea",
+        "Manchester United",
+        "Manchester City",
+        "Liverpool",
+        "Tottenham",
+        "Newcastle United",
+        "Brighton",
+        "Real Madrid",
+        "Barcelona",
+        "Bayern Munich",
+        "PSG",
+        "AC Milan",
+        "Inter Milan",
+        "Atletico",
+        "Bvb",
+        "Juventus",
+        "Napoli"
+      ]
+    }
+  }
+}
