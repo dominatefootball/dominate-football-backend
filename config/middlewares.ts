@@ -12,14 +12,16 @@ export default [
             'data:',
             'blob:',
             'dominate-football-backend.onrender.com',
-            '*.onrender.com'
+            '*.onrender.com',
+            'res.cloudinary.com' // ✅ Add this for Cloudinary images
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'dominate-football-backend.onrender.com',
-            '*.onrender.com'
+            '*.onrender.com', 
+            'res.cloudinary.com' // ✅ Add this for Cloudinary media
           ],
           upgradeInsecureRequests: null,
         },
