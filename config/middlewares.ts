@@ -33,7 +33,7 @@ export default [
     config: {
       origin: [
         'http://localhost:3000',
-        'https://dominate-football-frontend.vercel.app', // ✅ Add your Vercel domain
+        'https://dominate-football.vercel.app', // ✅ Add your Vercel domain
         'https://*.vercel.app' // ✅ Allow any Vercel preview deployments
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'],
